@@ -1,4 +1,3 @@
-from training import training
 from parsers.pdfid import pdfid
 
 import csv
@@ -104,10 +103,8 @@ def extract_features(path):
     return fv
 
 if __name__ == '__main__':
-    csv_path = '../evasion_pdfs/evasion_sample.csv'
-    #csv_path = '../evasion_pdfs/evasion_sample_revs.csv'
-    pdf_dir = '../evasion_pdfs/real/'
-    #pdf_dir = '../evasion_pdfs/real/exploits/revs'
+    csv_path = 'output/output.csv'
+    pdf_dir = '.'
     files = [join(pdf_dir, f) for f in listdir(pdf_dir) if isfile(join(pdf_dir, f)) and f.endswith('.pdf')]
     print(*files)
 
